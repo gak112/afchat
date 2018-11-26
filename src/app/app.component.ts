@@ -1,4 +1,6 @@
+import { FirestoreAdapter } from './adapter/firebase.adapter';
 import { Component } from '@angular/core';
+import { ChatAdapter } from 'ng-chat';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'afchattemp';
+  title = 'app';
+  userId = 999;
+
+  public adapter: ChatAdapter = new FirestoreAdapter();
 }
